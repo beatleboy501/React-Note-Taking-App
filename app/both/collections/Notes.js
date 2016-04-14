@@ -1,8 +1,7 @@
 Notes = new Mongo.Collection('notes');
 
-
 Meteor.methods({
-
+  
   '/note/insert': function(title, text) {
     let noteAttributes = {
       title: title,

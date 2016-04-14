@@ -6,8 +6,8 @@ List = React.createClass({
     handleDeleteItem:   React.PropTypes.func,
     newItemPlaceholder: React.PropTypes.string,
     handleAddItem:      React.PropTypes.func,
-    canEditItem:  React.PropTypes.bool,
-    handleEditItem:  React.PropTypes.func
+    canEditItem:        React.PropTypes.bool,
+    handleEditItem:     React.PropTypes.func
   },
   getDefaultProps() {
     return {

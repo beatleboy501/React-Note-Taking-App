@@ -16,7 +16,6 @@ ListItem = React.createClass({
   },
   displayListItem(){
     return this.displayTitle();
-      ;
   },
   render(){
     return <li key={this.props.key} className="list-group-item">

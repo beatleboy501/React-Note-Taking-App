@@ -1,24 +1,29 @@
 List = React.createClass({
   propTypes: {
     collection:         React.PropTypes.array.isRequired,
-    canAdd:             React.PropTypes.bool,
+    canAddItem:         React.PropTypes.bool,
+    canDeleteItem:      React.PropTypes.bool,
+    handleDeleteItem:   React.PropTypes.func,
     newItemPlaceholder: React.PropTypes.string,
     handleAddItem:      React.PropTypes.func
   },
   getDefaultProps() {
     return {
-      canAdd: false
+      canAddItem: false,
+      canDeleteItem: false
     };
   },
   getCollection(){
     return this.props.collection.map((item) => {
-      return <li key={item._id} className="list-group-item">
-        {item.title}
-      </li>;
+            return <ListItem
+              key={item._id}
+              item={item}
+              {...this.props}
+             />;
     });
   },
   displayAddItemForm() {
-    return this.props.canAdd?
+    return this.props.canAddItem?
         <li className="list-group-item">
           <SingleNoteSubmit
             placeholder={this.props.newItemPlaceholder}

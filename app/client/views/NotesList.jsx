@@ -11,17 +11,29 @@ NotesList = React.createClass({
       notes: Notes.find({}, {sort: { createdAt: -1 }}).fetch()
     }
   },
-  handleInsertNote(inputValue) {
-	   Meteor.call('/note/insert', inputValue, function(err, result){
+  handleInsertNote(inputTitle, inputValue) {
+	   Meteor.call('/note/insert', inputTitle, inputValue, function(err, result){
 	   	 if (err) { console.log('there was an error: ' + err.reason); };
     });
   },
+	handleDeleteNote(note) {
+		let deleteConfirm = confirm("Are you sure you wish to delete '" + note.title + "'?");
+		if(deleteConfirm) {
+			Meteor.call('/note/delete', note._id, function(err, result) {
+				if(err) {
+					console.log('there was an error: ' + err.reason);
+        };
+			});
+		}
+	},
   showNotes(){
    return this.data.subsReady?
        <List
            collection={this.data.notes}
            handleAddItem={this.handleInsertNote}
-           canAdd={true}
+					 handleDeleteItem={this.handleDeleteTask}
+           canAddItemItem={true}
+					 canDeleteItem={true}
            newItemPlaceHolder="New Note..."
        />
        :
@@ -34,7 +46,7 @@ NotesList = React.createClass({
       return (
           <div className="row">
               <div className="col-md-6 col-md-offset-3">
-                  <h1>My Notes</h1>
+                  <PageTitle title="My Notes" />
                   {this.showNotes()}
               </div>
           </div>

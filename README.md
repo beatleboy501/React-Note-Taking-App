@@ -1,6 +1,6 @@
-<div style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">
+<h1 style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">
   NOTE TAKING APP
-</div>
+</h1>
 
 Using React.js and Meteor, I was able to create a new Note Taking app for practice. <br/>
 The end goal is to integrate it with Evernote and OneNote. <br/>

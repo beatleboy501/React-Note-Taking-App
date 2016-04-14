@@ -1,38 +1,39 @@
 List = React.createClass({
   propTypes: {
     collection:         React.PropTypes.array.isRequired,
-    canAdd:             React.PropTypes.bool,
+    canAddItem:         React.PropTypes.bool,
+    canDeleteItem:      React.PropTypes.bool,
+    handleDeleteItem:   React.PropTypes.func,
     newItemPlaceholder: React.PropTypes.string,
-    handleAddItem:      React.PropTypes.func
+    handleAddItem:      React.PropTypes.func,
+    canEditItem:        React.PropTypes.bool,
+    handleEditItem:     React.PropTypes.func
   },
   getDefaultProps() {
     return {
-      canAdd: false
+      canAddItem: false,
+      canDeleteItem: false,
+      canEditItem: false
     };
   },
   getCollection(){
     return this.props.collection.map((item) => {
-      return <li key={item._id} className="list-group-item">
-        {item.title}
-      </li>;
+            return <ListItem
+              key={item._id}
+              item={item}
+              {...this.props}
+             />;
     });
   },
-  displayAddItemForm() {
-    return this.props.canAdd?
-        <li className="list-group-item">
-          <SingleNoteSubmit
-            placeholder={this.props.newItemPlaceholder}
-            handleInput={this.props.handleAddItem}
-          />
-        </li>
-        : null;
-  },
   render() {
-    return (
-        <ul className="list-group">
-          {this.displayAddItemForm()}
-          {this.getCollection()}
-        </ul>
+    return this.props.collection.length > 0? (
+        <div>
+          <PageTitle title="My Saved Notes" />
+          <ul className="list-group">
+            {this.getCollection()}
+          </ul>
+        </div>
     )
+    : null;
   }
 });

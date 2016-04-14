@@ -7,7 +7,7 @@ AppHeader = React.createClass({
   },
   render() {
     return (
-      <nav className="navbar navbar-inverse">
+      <nav className="navbar navbar-default">
         <div className="container">
           <div className="navbar-header">
             <a className="navbar-brand" href="/">{this.props.appTitle}</a>

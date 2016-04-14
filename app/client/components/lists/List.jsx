@@ -5,12 +5,15 @@ List = React.createClass({
     canDeleteItem:      React.PropTypes.bool,
     handleDeleteItem:   React.PropTypes.func,
     newItemPlaceholder: React.PropTypes.string,
-    handleAddItem:      React.PropTypes.func
+    handleAddItem:      React.PropTypes.func,
+    canEditItem:  React.PropTypes.bool,
+    handleEditItem:  React.PropTypes.func
   },
   getDefaultProps() {
     return {
       canAddItem: false,
-      canDeleteItem: false
+      canDeleteItem: false,
+      canEditItem: false
     };
   },
   getCollection(){

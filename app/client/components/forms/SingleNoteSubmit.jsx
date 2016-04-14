@@ -48,7 +48,7 @@ SingleNoteSubmit = React.createClass({
           onChange={this.updateInputValue}
         />
           <br/>
-        <input class="btn btn-default" type="submit" value="Save" />
+        <input className="btn btn-default" type="submit" value="Save" />
       </form>
     )
   }

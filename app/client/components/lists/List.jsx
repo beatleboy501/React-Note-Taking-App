@@ -25,22 +25,15 @@ List = React.createClass({
              />;
     });
   },
-  displayAddItemForm() {
-    return this.props.canAddItem?
-        <li className="list-group-item">
-          <SingleNoteSubmit
-            placeholder={this.props.newItemPlaceholder}
-            handleInput={this.props.handleAddItem}
-          />
-        </li>
-        : null;
-  },
   render() {
-    return (
-        <ul className="list-group">
-          {this.displayAddItemForm()}
-          {this.getCollection()}
-        </ul>
+    return this.props.collection.length > 0? (
+        <div>
+          <PageTitle title="My Saved Notes" />
+          <ul className="list-group">
+            {this.getCollection()}
+          </ul>
+        </div>
     )
+    : null;
   }
 });

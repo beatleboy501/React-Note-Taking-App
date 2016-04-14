@@ -29,6 +29,7 @@ NotesList = React.createClass({
 					console.log('there was an error: ' + err.reason);
         };
 			});
+			sAlert.info("Your note has been deleted", {effect: 'stackslide', position: 'bottom-right', timeout: 2000,});
 		}
 	},
   showNotes(){
@@ -53,7 +54,7 @@ NotesList = React.createClass({
       return (
           <div className="row">
               <div className="col-md-6 col-md-offset-3">
-                  <PageTitle title="My Notes" />
+								<PageTitle title="Create Note" />
 									<ul className="list-group">
 										<li className="list-group-item editable">
 											<SingleNoteSubmit

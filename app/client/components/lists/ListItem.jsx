@@ -5,6 +5,9 @@ ListItem = React.createClass({
   displayTitle(){
     return this.props.item.title;
   },
+  displayText(){
+    return this.props.item.text;
+  },
   displayDeleteBtn(){
     return this.props.canDeleteItem? <span className="pull-right li-option"><DeleteBtn  handleDelete={this.handleDeleteItem}  /></span>: null;
   },
@@ -18,7 +21,8 @@ ListItem = React.createClass({
   render(){
     return <li key={this.props.key} className="list-group-item">
              {this.displayDeleteBtn()}
-             {this.displayListItem()}
+            <h2> {this.displayTitle()}</h2>
+             <p>{this.displayText()}</p>
            </li>;
   }
 });

@@ -23,8 +23,10 @@ SingleNoteSubmit = React.createClass({
   },
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleInput(this.state.inputTitle.trim());
-    this.props.handleInput(this.state.inputValue.trim());
+    this.props.handleInput(
+      this.state.inputTitle.trim(),
+      this.state.inputValue.trim()
+    );
     this.setState({
       inputValue: "",
       inputTitle: ""

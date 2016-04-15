@@ -10,7 +10,7 @@ DeleteBtn = React.createClass({
   render() {
     return <button
         onClick={this.props.handleDelete}
-        className="btn btn-default btn-xs"
+        className="btn btn-circle btn-default btn-xs"
         title={this.props.btnTitle}
         alt={this.props.btnTitle}>
         <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>

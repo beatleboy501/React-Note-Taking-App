@@ -11,9 +11,11 @@ https://github.com/CodeChron/intro-to-meteor-react<br/>
 https://github.com/OneNoteDev/OneNoteAPISampleNodejs
 
 <h1 style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">In order to run...</h1>
-<p> 
+<p>
   1. git clone https://github.com/beatleboy501/note_taking_app.git<br/>
   2. Install <a href="https://www.meteor.com/install">Meteor</a><br/>
   3. Cd into the app directory and run the app: cd app && meteor<br/>
   4. Open a browser window and enter the URL: http://localhost:3000<br/>
 </p>
+
+![Alt text](./note-app.jpg?raw=true "React Note Taking App")

@@ -20,6 +20,7 @@ https://github.com/OneNoteDev/OneNoteAPISampleNodejs
 <br>
 <br>
 <br>
+<h1 style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">Preview:</h1>
 <hr>
 <kbd>
 ![Alt text](./note-app.jpg?raw=true "React Note Taking App")

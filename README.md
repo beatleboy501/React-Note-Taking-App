@@ -17,5 +17,10 @@ https://github.com/OneNoteDev/OneNoteAPISampleNodejs
   3. Cd into the app directory and run the app: cd app && meteor<br/>
   4. Open a browser window and enter the URL: http://localhost:3000<br/>
 </p>
-
+<br>
+<br>
+<br>
+<hr>
+<kbd>
 ![Alt text](./note-app.jpg?raw=true "React Note Taking App")
+</kbd>

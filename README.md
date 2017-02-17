@@ -9,8 +9,12 @@ Stretch goal would be to integrate it with the Concerts in town app here: https:
 Special thanks: <br/>
 https://github.com/CodeChron/intro-to-meteor-react<br/>
 https://github.com/OneNoteDev/OneNoteAPISampleNodejs
-
-<h1 style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">In order to run...</h1>
+<br/>
+<br/>
+<a href="https://beatleboy501-note2.herokuapp.com/" style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">Try it out here</a>
+<br/>
+<br/>
+<h1 style="text-align: center, font-weight: bold, font-family: 'Helvetica Neue Light'">Run it locally</h1>
 <p>
   1. git clone https://github.com/beatleboy501/note_taking_app.git<br/>
   2. Install <a href="https://www.meteor.com/install">Meteor</a><br/>
